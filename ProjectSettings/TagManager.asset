@@ -8,10 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - TerrainColl
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 2711309369
+    locked: 0
+  - name: UpperLevel
+    uniqueID: 2627237895
+    locked: 0
+  - name: Entities
+    uniqueID: 2363588513
+    locked: 0
+  - name: LowerLevel
+    uniqueID: 2635615567
     locked: 0
