@@ -15,7 +15,7 @@ public abstract class IWeapon : MonoBehaviour
     [Header("Level")]
     public int level;
     public int maxLevel;
-    public List<string> levelDescriptions;
+    public List<string> levelDescriptions; /// First item in List will be description of the weapon.
 
     [Header("Icon sprite")]
     public Sprite icon;
@@ -27,15 +27,12 @@ public abstract class IWeapon : MonoBehaviour
     public int projectileBounce;
     protected Vector2 direction;
 
-    [HideInInspector] public PlayerMover playerReference;
-
     private void Start()
-    { playerReference = FindObjectOfType<PlayerMover>(); StartCoroutine(AttackCoroutine()); }
+    { StartCoroutine(AttackCoroutine()); }
 
     protected IEnumerator AttackCoroutine()
     {
-        yield return new WaitForSeconds(cooldownTime);
-        Debug.Log("Attack");
+        yield return new WaitForSeconds(cooldownTime * (1 - GameManager.Instance.playerParameters.weaponCooldownReduction));
         Attack();
         StartCoroutine(AttackCoroutine());
     }
@@ -43,16 +40,16 @@ public abstract class IWeapon : MonoBehaviour
     public abstract void Attack();
     public abstract void LevelUp();
 
-    protected void InstantiateProjectile()
+    protected virtual void InstantiateProjectile()
     {
-        if (playerReference.targetVelocity == Vector2.zero)
+        if (GameManager.Instance.playerMover.targetVelocity == Vector2.zero)
             direction = Vector2.right;
         else
-            direction = playerReference.targetVelocity.normalized;
+            direction = GameManager.Instance.playerMover.targetVelocity.normalized;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        GameObject projectile = Instantiate(projectilePrefab, playerReference.transform.position,
+        GameObject projectile = Instantiate(projectilePrefab, transform.parent.position,
                                         Quaternion.AngleAxis(angle - 90f, Vector3.forward));
 
         PlayerProjectile script = projectile.GetComponent<PlayerProjectile>();

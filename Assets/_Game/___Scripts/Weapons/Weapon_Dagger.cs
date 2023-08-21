@@ -11,6 +11,10 @@ public class Weapon_Dagger : IWeapon
 
     public override void LevelUp()
     {
-
+        if (level < maxLevel)
+        {
+            cooldownTime -= 0.1f;
+            level++;
+        }
     }
 }

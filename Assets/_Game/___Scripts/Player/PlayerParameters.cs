@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 /// <summary>
-/// Data storage for all player-related parameters
+/// Data storage for all player-related parameters.
 /// </summary>
 public class PlayerParameters: MonoBehaviour
 {
@@ -16,16 +17,15 @@ public class PlayerParameters: MonoBehaviour
     public int maxHP;
     public float regenTime;
 
-    public float immunityTime;
+    public float immunityTime; 
 
     [Header("Stat modifiers")]
-    public float additionalDamage;
+    public float additionalDamage; /// Percentage
     public int additionalProjectileAmmount;
-    public float weaponCooldownReduction;
+    public float weaponCooldownReduction; /// Percentage
 
     public float luck;
     public float experienceGrowth;
 
     public float pickupRange;
-
 }

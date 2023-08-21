@@ -13,8 +13,6 @@ public class PlayerMover : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    private PlayerParameters playerParams;
-
     ///[HideInInspector] public Vector2 handToMouseDirection;
     ///[HideInInspector] public float handToMouseRotation;
 
@@ -25,20 +23,11 @@ public class PlayerMover : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        playerParams = GetComponent<PlayerParameters>();
     }
 
     void Update()
     {
         targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-        /*handToMouseDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-
-        handToMouseRotation = Mathf.Atan2(handToMouseDirection.y, handToMouseDirection.x) * Mathf.Rad2Deg;
-
-
-        float angle = Mathf.Atan2(handToMouseDirection.y, handToMouseDirection.x) * Mathf.Rad2Deg;
-        Quaternion handRotation = Quaternion.AngleAxis(angle, Vector3.forward);*/
 
         if (targetVelocity.magnitude > 0)
             animator.SetBool("IsWalking", true);
@@ -53,6 +42,6 @@ public class PlayerMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + targetVelocity * playerParams.movementSpeed * Time.deltaTime);
+        rb.MovePosition(rb.position + targetVelocity * GameManager.Instance.playerParameters.movementSpeed * Time.deltaTime);
     }
 }

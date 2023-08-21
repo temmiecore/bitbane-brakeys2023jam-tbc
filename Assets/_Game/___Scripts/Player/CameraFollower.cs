@@ -22,7 +22,6 @@ public class CameraFollower : MonoBehaviour
     void Update()
     {
         handToMouseDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - target.position;
-
         Camera.main.orthographicSize = cameraDistance;
     }
 
