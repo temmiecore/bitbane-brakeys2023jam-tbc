@@ -13,12 +13,12 @@ public class PlayerMover : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    private Vector2 targetVelocity;
+    private PlayerParameters playerParams;
 
     ///[HideInInspector] public Vector2 handToMouseDirection;
     ///[HideInInspector] public float handToMouseRotation;
 
-    private PlayerParameters playerParams;
+    [HideInInspector] public Vector2 targetVelocity;
 
     void Start()
     {
