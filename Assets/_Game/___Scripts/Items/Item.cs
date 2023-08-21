@@ -27,7 +27,6 @@ public class Item : MonoBehaviour
             case ModifiedParameterName.movementSpeed: { GameManager.Instance.playerParameters.movementSpeed += value; break; }
             case ModifiedParameterName.maxHP: { GameManager.Instance.playerParameters.maxHP += (int)value; break; }
             case ModifiedParameterName.regenTime: { GameManager.Instance.playerParameters.regenTime += value; break; }
-            case ModifiedParameterName.immunityTime: { GameManager.Instance.playerParameters.immunityTime += value; break; }
             case ModifiedParameterName.additionalDamage: { GameManager.Instance.playerParameters.additionalDamage += value; break; }
             case ModifiedParameterName.additionalProjectileAmmount: { GameManager.Instance.playerParameters.additionalProjectileAmmount += (int)value; break; }
             case ModifiedParameterName.weaponCooldownReduction: { GameManager.Instance.playerParameters.weaponCooldownReduction += value; break; }
@@ -52,7 +51,6 @@ public enum ModifiedParameterName
     movementSpeed,
     maxHP,
     regenTime,
-    immunityTime,
     additionalDamage,
     additionalProjectileAmmount,
     weaponCooldownReduction,

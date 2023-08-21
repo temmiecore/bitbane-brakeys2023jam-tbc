@@ -11,6 +11,7 @@ public abstract class IWeapon : MonoBehaviour
     public string weaponName;
     public float damage;
     public float cooldownTime;
+    public float knockbackStrength;
 
     [Header("Level")]
     public int level;

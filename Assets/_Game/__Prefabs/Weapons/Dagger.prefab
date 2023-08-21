@@ -46,6 +46,7 @@ MonoBehaviour:
   weaponName: Throwing Dagger
   damage: 5
   cooldownTime: 1
+  knockbackStrength: 2
   level: 0
   maxLevel: 5
   levelDescriptions: []
@@ -54,4 +55,3 @@ MonoBehaviour:
   projectileSpeed: 70
   projectilePierce: 1
   projectileBounce: 1
-  playerReference: {fileID: 0}

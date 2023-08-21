@@ -15,7 +15,7 @@ public class ItemCustomInspector : Editor
         {
             weaponScript.LevelUp();
         }
-        if (GUILayout.Button("Modify Player Parameter"))
+        if (GUILayout.Button("Apply Item Effect"))
         {
             weaponScript.ModifyParameter();
         }
