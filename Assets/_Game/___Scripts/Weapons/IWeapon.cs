@@ -5,21 +5,13 @@ using UnityEngine;
 /// <summary>
 /// Abstract weapon class.
 /// </summary>
-public abstract class IWeapon : MonoBehaviour
+public abstract class IWeapon : ICollectable
 {
     [Header("General properties")]
     public string weaponName;
     public float damage;
     public float cooldownTime;
     public float knockbackStrength;
-
-    [Header("Level")]
-    public int level;
-    public int maxLevel;
-    public List<string> levelDescriptions; /// First item in List will be description of the weapon.
-
-    [Header("Icon sprite")]
-    public Sprite icon;
 
     [Header("Projectile properties")]
     public GameObject projectilePrefab;
@@ -39,7 +31,7 @@ public abstract class IWeapon : MonoBehaviour
     }
 
     public abstract void Attack();
-    public abstract void LevelUp();
+    public override void LevelUp() { }
 
     protected virtual void InstantiateProjectile()
     {

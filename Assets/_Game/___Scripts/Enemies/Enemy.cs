@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
 
     public void Death()
     {
-        
+        Destroy(gameObject);   
     }
 
     public void Knockback(float weaponKnockbackStrength)

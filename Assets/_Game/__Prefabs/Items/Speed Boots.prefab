@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6526072941116143500
+--- !u!1 &2543165501918327883
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6576342734943750677}
-  - component: {fileID: 1003451949474681949}
-  m_Layer: 6
-  m_Name: Dagger
+  - component: {fileID: 2543165501918327893}
+  - component: {fileID: 2543165501918327892}
+  m_Layer: 0
+  m_Name: Speed Boots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6576342734943750677
+--- !u!4 &2543165501918327893
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6526072941116143500}
+  m_GameObject: {fileID: 2543165501918327883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,33 +31,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1003451949474681949
+--- !u!114 &2543165501918327892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6526072941116143500}
+  m_GameObject: {fileID: 2543165501918327883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fe4f4e1d558f134d929aa90b81b88d2, type: 3}
+  m_Script: {fileID: 11500000, guid: ebc2bb19e7a866a4d9ae7be65b51b284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
   maxLevel: 5
   levelDescriptions:
-  - Dagger. Dagger
-  - Dagger. Dagger LVL2
-  - Dagger. Dagger LVL3
-  - Dagger. Dagger LVL4
-  - Dagger. Dagger LVL5
-  icon: {fileID: -6435753171379192124, guid: ff6024faae5d78f46b0032952370bcbc, type: 3}
-  weight: 100
-  weaponName: Throwing Dagger
-  damage: 5
-  cooldownTime: 1
-  knockbackStrength: 2
-  projectilePrefab: {fileID: 8318039554820057488, guid: 672ab84dbe1c589479f85acd445e09aa, type: 3}
-  projectileSpeed: 70
-  projectilePierce: 1
-  projectileBounce: 1
+  - Speed Boots. Give speed
+  - Speed Boots. Give speed LVL2
+  - Speed Boots. Give speed LVL3
+  - Speed Boots. Give speed LVL4
+  - Speed Boots. Give speed LVL5
+  icon: {fileID: 1789241896626981711, guid: ff6024faae5d78f46b0032952370bcbc, type: 3}
+  weight: 50
+  itemName: Speed Boots
+  modifiedParameterName: 0
+  value: 0.02
+  levelAdditions:
+  - 0
+  - 0.02
+  - 0.02
+  - 0.02
+  - 0.02

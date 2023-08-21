@@ -23,8 +23,22 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public PlayerMover playerMover;
     public PlayerParameters playerParameters;
+    public Transform weaponParent;
+    public Transform itemParent;
+
     [Header("Floating Text Object")]
     public FloatingText floatingTextObject;
+
+    [Header("Items/Weapons List")]
+    public List<ICollectable> collectables;
+
+    [Header("Items/Weapons already on Player")]
+    public List<ICollectable> playerCollectables;
+
+    private void Start()
+    {
+        collectables.Sort((x,y) => x.weight.CompareTo(y.weight));
+    }
 
     public void InstantiateFloatingText(string text, Color color, float liveTime, int animId, Transform target)
     {
