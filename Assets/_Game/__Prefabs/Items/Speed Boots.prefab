@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc2bb19e7a866a4d9ae7be65b51b284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemId: 1
   level: 0
-  maxLevel: 5
+  maxLevel: 4
   levelDescriptions:
   - Speed Boots. Give speed
   - Speed Boots. Give speed LVL2
@@ -52,8 +53,7 @@ MonoBehaviour:
   - Speed Boots. Give speed LVL4
   - Speed Boots. Give speed LVL5
   icon: {fileID: 1789241896626981711, guid: ff6024faae5d78f46b0032952370bcbc, type: 3}
-  weight: 50
-  itemName: Speed Boots
+  weight: 100
   modifiedParameterName: 0
   value: 0.02
   levelAdditions:

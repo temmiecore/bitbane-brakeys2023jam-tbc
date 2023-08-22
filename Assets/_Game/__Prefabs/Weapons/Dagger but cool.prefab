@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe4f4e1d558f134d929aa90b81b88d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemId: 2
   level: 0
-  maxLevel: 5
+  maxLevel: 4
   levelDescriptions:
   - DAGEGE COOL
   - DAGEGE COOL LVL2
@@ -52,8 +53,7 @@ MonoBehaviour:
   - DAGEGE COOL LVL4
   - DAGEGE COOL LVL5
   icon: {fileID: -6435753171379192124, guid: ff6024faae5d78f46b0032952370bcbc, type: 3}
-  weight: 50
-  weaponName: Dagger but COOLER
+  weight: 100
   damage: 10
   cooldownTime: 0.5
   knockbackStrength: 3

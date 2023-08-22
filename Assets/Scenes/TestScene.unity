@@ -9509,6 +9509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Speed Boots
       objectReference: {fileID: 0}
+    - target: {fileID: 2543165501918327892, guid: ba4fbb4ae1254ec46a02be67e466ccb4, type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2543165501918327893, guid: ba4fbb4ae1254ec46a02be67e466ccb4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9531,15 +9535,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2543165501918327893, guid: ba4fbb4ae1254ec46a02be67e466ccb4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2543165501918327893, guid: ba4fbb4ae1254ec46a02be67e466ccb4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2543165501918327893, guid: ba4fbb4ae1254ec46a02be67e466ccb4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2543165501918327893, guid: ba4fbb4ae1254ec46a02be67e466ccb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -38189,7 +38193,10 @@ MonoBehaviour:
   - {fileID: 2021612334}
   - {fileID: 69052771}
   - {fileID: 648310819}
-  bufferList: []
+  buttons:
+  - {fileID: 1264444153}
+  - {fileID: 1849187093}
+  - {fileID: 61656047}
 --- !u!1 &1521461762
 GameObject:
   m_ObjectHideFlags: 0
@@ -41756,10 +41763,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 516695032}
     m_Modifications:
-    - target: {fileID: 1003451949474681949, guid: 86987a04b3623e84e9cc3dc331dc517c, type: 3}
-      propertyPath: knockbackStrength
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6526072941116143500, guid: 86987a04b3623e84e9cc3dc331dc517c, type: 3}
       propertyPath: m_Name
       value: Dagger

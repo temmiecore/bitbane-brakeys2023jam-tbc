@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class ICollectable : MonoBehaviour
 {
+    public int itemId;
+
     [Header("Level")]
     public int level;
     public int maxLevel;

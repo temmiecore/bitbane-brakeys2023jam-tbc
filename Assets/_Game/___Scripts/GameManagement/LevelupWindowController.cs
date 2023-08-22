@@ -10,10 +10,12 @@ public class LevelupWindowController : MonoBehaviour
 
     public List<Image> icons;
     public List<TextMeshProUGUI> descriptions;
+    public List<Button> buttons;
+
     private List<bool> isNew;
     private List<ICollectable> items;
 
-    public List<ICollectable> bufferList;
+    private List<ICollectable> bufferList;
     private int totalWeight;
 
     private void Start()
@@ -25,32 +27,53 @@ public class LevelupWindowController : MonoBehaviour
     public void ChooseItem(int cell)
     {
         if (isNew[cell])
-            Instantiate(items[cell], GameManager.Instance.itemParent);
+        {
+            ICollectable newItem = Instantiate(items[cell], GameManager.Instance.itemParent);
+            GameManager.Instance.playerCollectables.Add(newItem);
+        }
         else
-            items[cell].LevelUp();
+        {
+            ICollectable itemOnPlayer = GetItemOnPlayer(items[cell].itemId);
+            itemOnPlayer.LevelUp();
+            if (itemOnPlayer.level >= itemOnPlayer.maxLevel)
+                GameManager.Instance.collectables.Remove(items[cell]);
+        }
 
         CloseWindow();
     }
 
     public void UpdateWindow()
     {
+        icons[0].sprite = null; icons[1].sprite = null; icons[2].sprite = null;
+        descriptions[0].text = ""; descriptions[1].text = ""; descriptions[2].text = "";
+        buttons[0].enabled = false; buttons[1].enabled = false; buttons[2].enabled = false;
+
         totalWeight = 0;
         bufferList = new List<ICollectable>(GameManager.Instance.collectables);
         foreach (ICollectable item in bufferList)
             totalWeight += item.weight;
 
-        for (int i = 0; i < 3; i++)
+        int i = 0;
+        int bufferListSize = bufferList.Count;
+
+        Debug.Log(bufferListSize);
+
+        while (i < Mathf.Min(3, bufferListSize))
         {
             ICollectable item = SelectRandomItem();
 
             icons[i].sprite = item.icon;
             icons[i].SetNativeSize();
 
-            /// This is not working 
-            if (GameManager.Instance.playerCollectables.Contains(item))
+            ICollectable itemOnPlayer = GetItemOnPlayer(item.itemId);
+
+            if (itemOnPlayer != null)
             {
+                if (itemOnPlayer.level >= itemOnPlayer.maxLevel)
+                    continue;
+
                 isNew[i] = false;
-                /// FIGURE OUT A WAY TO CHECK IF ITEM IS POSSESED BY PLAYER AND GET REFERENCE TO IT
+                descriptions[i].text = itemOnPlayer.levelDescriptions[itemOnPlayer.level + 1];
             }
             else
             {
@@ -58,29 +81,31 @@ public class LevelupWindowController : MonoBehaviour
                 descriptions[i].text = item.levelDescriptions[0];
             }
 
-
+            buttons[i].enabled = true;
             items[i] = item;
+            i++;
         }
     }
 
+    public ICollectable GetItemOnPlayer(int id)
+    {
+        return GameManager.Instance.playerCollectables.Find(x => x.itemId == id);
+    }
+
+    /// This works fine
     public ICollectable SelectRandomItem()
     {
         int randomWeight = Random.Range(0, totalWeight);
         int cumulativeWeight = 0;
 
-        Debug.Log("||| "+totalWeight+" - "+randomWeight);
-
         foreach (ICollectable item in bufferList)
         {
             cumulativeWeight += item.weight;
-
-            Debug.Log(cumulativeWeight);
 
             if (cumulativeWeight > randomWeight)
             { bufferList.Remove(item); totalWeight -= item.weight; return item; }
         }
 
-        Debug.Log("Baaad");
         return null;
     }
 
@@ -93,7 +118,6 @@ public class LevelupWindowController : MonoBehaviour
 
     public void CloseWindow()
     {
-        UpdateWindow();
         canvasGroup.alpha = 0f;
         canvasGroup.blocksRaycasts = false;
     }

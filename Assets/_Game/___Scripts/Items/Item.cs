@@ -6,11 +6,15 @@ using UnityEngine;
 public class Item : ICollectable
 {
     [Header("General properties")]
-    public string itemName;
     public ModifiedParameterName modifiedParameterName;
     public float value;
 
     public List<float> levelAdditions; /// How much value is increased by leveling up the item. First item in List will be 0.
+
+    private void Start()
+    {
+        ModifyParameter();
+    }
 
     public void ModifyParameter()
     {

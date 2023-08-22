@@ -8,7 +8,6 @@ using UnityEngine;
 public abstract class IWeapon : ICollectable
 {
     [Header("General properties")]
-    public string weaponName;
     public float damage;
     public float cooldownTime;
     public float knockbackStrength;
