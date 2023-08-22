@@ -88,11 +88,8 @@ public class LevelupWindowController : MonoBehaviour
     }
 
     public ICollectable GetItemOnPlayer(int id)
-    {
-        return GameManager.Instance.playerCollectables.Find(x => x.itemId == id);
-    }
+    { return GameManager.Instance.playerCollectables.Find(x => x.itemId == id); }
 
-    /// This works fine
     public ICollectable SelectRandomItem()
     {
         int randomWeight = Random.Range(0, totalWeight);
