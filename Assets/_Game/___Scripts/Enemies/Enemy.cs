@@ -51,8 +51,10 @@ public class Enemy : MonoBehaviour
     private IEnumerator KnockbackCoroutine(float weaponKnockbackStrength)
     {
         float speedBuff = movementSpeed;
+        GetComponent<Rigidbody2D>().mass += 5f;
         movementSpeed = -movementSpeed * weaponKnockbackStrength / weight;
         yield return new WaitForSeconds(0.1f);
+        GetComponent<Rigidbody2D>().mass -= 5f;
         movementSpeed = speedBuff;
     }
 
