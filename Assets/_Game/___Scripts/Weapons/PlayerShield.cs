@@ -30,8 +30,6 @@ public class PlayerShield : MonoBehaviour
     public void SetupShield(IWeapon weapon)
     {
         damage = weapon.damage;
-        projectileBounce = weapon.projectileBounce;
-        projectilePierce = weapon.projectilePierce;
         knockbackStrength = weapon.knockbackStrength;
     }
 

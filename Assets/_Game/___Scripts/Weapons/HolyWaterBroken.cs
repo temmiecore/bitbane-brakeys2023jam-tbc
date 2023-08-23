@@ -2,22 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAreaDamage : MonoBehaviour
+public class HolyWaterBroken : MonoBehaviour
 {
-    private Transform position;
     private float damage;
     private float knockbackStrength;
 
-    private void Update()
+    public void SetUpArea(HolyWater water)
     {
-        transform.position = position.position;
-    }
+        damage = water.damage;
+        knockbackStrength = water.knockbackStrength;
+        transform.localScale = new Vector3(water.radius, water.radius, 1);
 
-    public void SetupCircle(IWeapon weapon, Transform position)
-    {
-        damage = weapon.damage;
-        knockbackStrength = weapon.knockbackStrength;
-        this.position = position;
+        Destroy(gameObject, water.duration);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

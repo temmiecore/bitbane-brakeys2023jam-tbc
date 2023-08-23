@@ -13,8 +13,8 @@ public class PlayerMover : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    ///[HideInInspector] public Vector2 handToMouseDirection;
-    ///[HideInInspector] public float handToMouseRotation;
+    [HideInInspector] public Vector2 handToMouseDirection;
+    //[HideInInspector] public float handToMouseRotation;
 
     [HideInInspector] public Vector2 targetVelocity;
 
@@ -28,6 +28,8 @@ public class PlayerMover : MonoBehaviour
     void Update()
     {
         targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        handToMouseDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
         if (targetVelocity.magnitude > 0)
             animator.SetBool("IsWalking", true);

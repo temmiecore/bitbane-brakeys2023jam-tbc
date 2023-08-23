@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProjectile : MonoBehaviour
+public class ExplosionProjectile : MonoBehaviour
 {
     [HideInInspector] public float damage;
-    [HideInInspector] public int projectilePierce;
-    [HideInInspector] public int projectileBounce;
     [HideInInspector] public float knockbackStrength;
+
+    public GameObject explosionPrefab;
 
     public void SetupProjectile(IWeapon weapon)
     {
@@ -20,20 +20,32 @@ public class PlayerProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
-        { 
+        {
             collision.GetComponent<Enemy>().RecieveDamage(damage);
             collision.GetComponent<Enemy>().Knockback(knockbackStrength);
 
-            projectilePierce--;
-            if (projectilePierce <= 0)
-                Destroy(gameObject);
+            Explosion();
+            Destroy(gameObject);
         }
 
         if (collision.tag == "Destructable")
         { /*Destroy destructable*/ }
 
-        // Bounce off if has bounce
         if (collision.tag == "TerrainCol")
             Destroy(gameObject);
+    }
+
+    private void Explosion()
+    {
+        GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(explosion, 0.5f);
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(GameManager.Instance.weaponParent.position, 0.48f, LayerMask.GetMask("Enemy"));
+
+        foreach (Collider2D collider in colliders)
+        {
+            collider.GetComponent<Enemy>().RecieveDamage(damage);
+            collider.GetComponent<Enemy>().Knockback(knockbackStrength + 2f);
+        }
     }
 }

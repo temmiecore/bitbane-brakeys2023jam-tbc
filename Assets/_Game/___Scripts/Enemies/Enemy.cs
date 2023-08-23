@@ -17,10 +17,12 @@ public class Enemy : MonoBehaviour
     private float immunityTime;
     private float immunityCooldown;
 
+    private bool alreadyKnockbacked;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        immunityTime = 0.8f;
+        immunityTime = 0.5f;
     }
 
     private void Update()
@@ -55,17 +57,25 @@ public class Enemy : MonoBehaviour
 
     public void Knockback(float weaponKnockbackStrength)
     {
+        if (alreadyKnockbacked)
+            return;
+
         StartCoroutine(KnockbackCoroutine(weaponKnockbackStrength));
     }
 
     private IEnumerator KnockbackCoroutine(float weaponKnockbackStrength)
     {
+        alreadyKnockbacked = true;
         float speedBuff = movementSpeed;
-        GetComponent<Rigidbody2D>().mass += 5f;
-        movementSpeed = -movementSpeed * weaponKnockbackStrength / weight;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<Rigidbody2D>().mass -= 5f;
-        movementSpeed = speedBuff;
+        if (weaponKnockbackStrength != 0)
+        {
+            GetComponent<Rigidbody2D>().mass += 5f;
+            movementSpeed = -movementSpeed * weaponKnockbackStrength / weight;
+            yield return new WaitForSeconds(0.1f);
+            GetComponent<Rigidbody2D>().mass -= 5f;
+            movementSpeed = speedBuff;
+        }
+        alreadyKnockbacked = false;
     }
 
     private void OnCollisionStay2D(Collision2D collision)

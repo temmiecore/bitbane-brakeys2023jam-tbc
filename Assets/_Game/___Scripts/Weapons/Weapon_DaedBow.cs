@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon_Dagger : IWeapon
+public class Weapon_DaedBow : IWeapon
 {
     [Header("Projectile properties")]
     public GameObject projectilePrefab;
+    public int projectileAmount;
     public float projectileSpeed;
     public int projectilePierce;
     public int projectileBounce;
 
     private Vector2 direction;
+    private Transform nearestEnemy;
+
     public override void Attack()
     {
         InstantiateProjectile();
@@ -22,16 +25,14 @@ public class Weapon_Dagger : IWeapon
         {
             damage += 1f;
             cooldownTime -= 0.1f;
+            projectileAmount += 1;
             level++;
         }
     }
 
-    protected void InstantiateProjectile()
+    private void InstantiateProjectile()
     {
-        if (GameManager.Instance.playerMover.targetVelocity == Vector2.zero)
-            direction = Vector2.right;
-        else
-            direction = GameManager.Instance.playerMover.targetVelocity.normalized;
+        direction = GameManager.Instance.playerMover.handToMouseDirection;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 

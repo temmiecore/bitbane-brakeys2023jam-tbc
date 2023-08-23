@@ -12,13 +12,6 @@ public abstract class IWeapon : ICollectable
     public float cooldownTime;
     public float knockbackStrength;
 
-    [Header("Projectile properties")]
-    public GameObject projectilePrefab;
-    public float projectileSpeed;
-    public int projectilePierce;
-    public int projectileBounce;
-    protected Vector2 direction;
-
     private void Start()
     { StartCoroutine(AttackCoroutine()); }
 

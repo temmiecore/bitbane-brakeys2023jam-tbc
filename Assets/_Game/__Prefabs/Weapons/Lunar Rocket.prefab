@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8990681166563906174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8990681166563906172}
+  - component: {fileID: 8990681166563906173}
+  m_Layer: 7
+  m_Name: Lunar Rocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8990681166563906172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8990681166563906174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.34542242, y: 0.32853913, z: -1.4850297}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8990681166563906173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8990681166563906174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7e4d66c2b091c478ad206e862ea93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  level: 0
+  maxLevel: 3
+  levelDescriptions:
+  - 'Lunar Rocket. '
+  - 'Lunar Rocket. '
+  - 'Lunar Rocket. '
+  - 'Lunar Rocket. '
+  icon: {fileID: 21300000, guid: 4377a68055b4c21429703ca295ff0893, type: 3}
+  weight: 40
+  damage: 10
+  cooldownTime: 4
+  knockbackStrength: 2
+  projectilePrefab: {fileID: 7177619941510119948, guid: 6aa0febb9486d5f4fa66cdf0ac5d7008, type: 3}
+  projectileSpeed: 50
