@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6990325617159055336
+--- !u!1 &2905236174132704670
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,57 +8,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5276111520866177075}
-  - component: {fileID: 1181454922171023486}
+  - component: {fileID: 2905236174132704668}
+  - component: {fileID: 2905236174132704671}
   m_Layer: 0
-  m_Name: Health thing
+  m_Name: Restoration Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5276111520866177075
+--- !u!4 &2905236174132704668
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6990325617159055336}
+  m_GameObject: {fileID: 2905236174132704670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.21855791, y: 0.038086, z: -1.6568525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1181454922171023486
+--- !u!114 &2905236174132704671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6990325617159055336}
+  m_GameObject: {fileID: 2905236174132704670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebc2bb19e7a866a4d9ae7be65b51b284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 0
+  itemId: 3
   level: 0
   maxLevel: 4
   levelDescriptions:
-  - Health. Give health
-  - Health. Give health LVL2
-  - Health. Give health LVL3
-  - Health. Give health LVL4
-  - Health. Give health LVL5
-  icon: {fileID: -965978741949361449, guid: ff6024faae5d78f46b0032952370bcbc, type: 3}
-  weight: 1
-  modifiedParameterName: 1
-  value: 5
+  - Restoration ring. Grants life regeneration.
+  - Restoration ring. Life regeneration speed increased.
+  - Restoration ring. Life regeneration speed increased.
+  - Restoration ring. Life regeneration speed increased.
+  - Restoration ring. Life regeneration speed increased. MAX
+  icon: {fileID: 21300000, guid: a4a7840d7464cbc4e89a202b5d1af04f, type: 3}
+  weight: 40
+  modifiedParameterName: 2
+  value: 2
   levelAdditions:
   - 0
-  - 5
-  - 5
-  - 10
-  - 10
+  - 1
+  - 1
+  - 1
+  - 1

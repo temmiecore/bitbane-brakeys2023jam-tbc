@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8168115283986609163
+--- !u!1 &5490620109588215696
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,56 +8,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8108838398950295954}
-  - component: {fileID: 2749244623198967770}
-  m_Layer: 6
-  m_Name: Dagger but cool
+  - component: {fileID: 5490620109588215698}
+  - component: {fileID: 5490620109588215697}
+  m_Layer: 0
+  m_Name: Haste Catalyst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8108838398950295954
+--- !u!4 &5490620109588215698
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8168115283986609163}
+  m_GameObject: {fileID: 5490620109588215696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.21855791, y: 0.038086, z: -1.6568525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2749244623198967770
+--- !u!114 &5490620109588215697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8168115283986609163}
+  m_GameObject: {fileID: 5490620109588215696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fe4f4e1d558f134d929aa90b81b88d2, type: 3}
+  m_Script: {fileID: 11500000, guid: ebc2bb19e7a866a4d9ae7be65b51b284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 2
   level: 0
   maxLevel: 4
   levelDescriptions:
-  - DAGEGE COOL
-  - DAGEGE COOL LVL2
-  - DAGEGE COOL LVL3
-  - DAGEGE COOL LVL4
-  - DAGEGE COOL LVL5
-  icon: {fileID: -6435753171379192124, guid: ff6024faae5d78f46b0032952370bcbc, type: 3}
-  weight: 100
-  damage: 10
-  cooldownTime: 0.5
-  knockbackStrength: 3
-  projectilePrefab: {fileID: 8318039554820057488, guid: 672ab84dbe1c589479f85acd445e09aa, type: 3}
-  projectileSpeed: 80
-  projectilePierce: 2
-  projectileBounce: 1
+  - Haste catalyst. Grants additional fighting speed.
+  - Haste catalyst. Additional fighting speed.
+  - Haste catalyst. Additional fighting speed.
+  - Haste catalyst. Additional fighting speed.
+  - Haste catalyst. Additional fighting speed. MAX
+  icon: {fileID: 21300000, guid: 79e2ec58cf188b946bf681bcf2e13af2, type: 3}
+  weight: 40
+  modifiedParameterName: 5
+  value: 0.05
+  levelAdditions:
+  - 0
+  - 0.05
+  - 0.05
+  - 0.05
+  - 0.05

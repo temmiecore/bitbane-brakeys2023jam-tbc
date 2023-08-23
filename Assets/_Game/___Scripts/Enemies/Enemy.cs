@@ -14,14 +14,19 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 direction;
 
+    private float immunityTime;
+    private float immunityCooldown;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        immunityTime = 0.8f;
     }
 
     private void Update()
     {
         direction = GameManager.Instance.playerMover.transform.position - transform.position;
+        immunityCooldown += Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -31,8 +36,13 @@ public class Enemy : MonoBehaviour
 
     public void RecieveDamage(float damage)
     {
+        if (immunityCooldown < immunityTime)
+            return;
+
         hp -= damage;
         GameManager.Instance.InstantiateFloatingText("-" + damage, Color.white, 0.45f, Random.Range(1, 4), transform);
+
+        immunityCooldown = 0f;
 
         if (hp <= 0)
             Death();

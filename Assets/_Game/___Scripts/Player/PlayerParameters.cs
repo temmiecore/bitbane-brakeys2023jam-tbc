@@ -9,7 +9,7 @@ using UnityEngine;
 /// </summary>
 public class PlayerParameters: MonoBehaviour
 {
-    [Range(0f, 1f)]
+    [Range(0f, 5f)]
     public float movementSpeed;
 
     [Header("Health component")]
@@ -25,6 +25,11 @@ public class PlayerParameters: MonoBehaviour
 
     public float luck;
     public float experienceGrowth;
+
+    public int lives;
+    public float dodgeChance;
+
+    public float instakill;
 
     public float pickupRange;
 

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5331215240080007725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5331215240080007731}
+  - component: {fileID: 5331215240080007730}
+  m_Layer: 0
+  m_Name: Sacrificial Skull
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5331215240080007731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331215240080007725}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.052770898, y: 0.10545078, z: -1.8548872}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5331215240080007730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331215240080007725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4deee6d2155f64f42abd9da039811983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  level: 0
+  maxLevel: 4
+  levelDescriptions:
+  - Sacrificial Skull. Area damage around player.
+  - Sacrificial Skull. Increased area, damage and knockback.
+  - Sacrificial Skull. Increased area, damage and knockback.
+  - Sacrificial Skull. Increased area, damage and knockback.
+  - Sacrificial Skull. Increased area, damage and knockback. MAX
+  icon: {fileID: 21300000, guid: f0f3258d9f033984ab196cac8d8a87b9, type: 3}
+  weight: 80
+  damage: 2
+  cooldownTime: 0.2
+  knockbackStrength: 0.5
+  projectilePrefab: {fileID: 0}
+  projectileSpeed: 0
+  projectilePierce: 0
+  projectileBounce: 0
+  circleRadius: 0.7
+  isSpawned: 0
+  circlePrefab: {fileID: 4499669103145894808, guid: df714fc05fe6b5a4e95d3b6af4fa731b, type: 3}

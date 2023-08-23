@@ -23,13 +23,16 @@ public class Item : ICollectable
         {
             case ModifiedParameterName.movementSpeed: { GameManager.Instance.playerParameters.movementSpeed += value; break; }
             case ModifiedParameterName.maxHP: { GameManager.Instance.playerParameters.maxHP += (int)value; break; }
-            case ModifiedParameterName.regenTime: { GameManager.Instance.playerParameters.regenTime += value; break; }
+            case ModifiedParameterName.regenAmount: { GameManager.Instance.playerParameters.regenAmount += value; break; }
             case ModifiedParameterName.additionalDamage: { GameManager.Instance.playerParameters.additionalDamage += value; break; }
             case ModifiedParameterName.additionalProjectileAmmount: { GameManager.Instance.playerParameters.additionalProjectileAmmount += (int)value; break; }
             case ModifiedParameterName.weaponCooldownReduction: { GameManager.Instance.playerParameters.weaponCooldownReduction += value; break; }
             case ModifiedParameterName.luck: { GameManager.Instance.playerParameters.luck += value; break; }
             case ModifiedParameterName.experienceGrowth: { GameManager.Instance.playerParameters.experienceGrowth += value; break; }
             case ModifiedParameterName.pickupRange: { GameManager.Instance.playerParameters.pickupRange += value; break; }
+            case ModifiedParameterName.additionalLife: { GameManager.Instance.playerParameters.lives += (int)value; break; }
+            case ModifiedParameterName.dodgeChance: { GameManager.Instance.playerParameters.dodgeChance += value; break; }
+            case ModifiedParameterName.instakill: { GameManager.Instance.playerParameters.instakill += value; break; }
         }
     }
     public void RemoveModifier()
@@ -39,13 +42,16 @@ public class Item : ICollectable
         {
             case ModifiedParameterName.movementSpeed: { GameManager.Instance.playerParameters.movementSpeed -= value; break; }
             case ModifiedParameterName.maxHP: { GameManager.Instance.playerParameters.maxHP -= (int)value; break; }
-            case ModifiedParameterName.regenTime: { GameManager.Instance.playerParameters.regenTime -= value; break; }
+            case ModifiedParameterName.regenAmount: { GameManager.Instance.playerParameters.regenAmount -= value; break; }
             case ModifiedParameterName.additionalDamage: { GameManager.Instance.playerParameters.additionalDamage -= value; break; }
             case ModifiedParameterName.additionalProjectileAmmount: { GameManager.Instance.playerParameters.additionalProjectileAmmount -= (int)value; break; }
             case ModifiedParameterName.weaponCooldownReduction: { GameManager.Instance.playerParameters.weaponCooldownReduction -= value; break; }
             case ModifiedParameterName.luck: { GameManager.Instance.playerParameters.luck -= value; break; }
             case ModifiedParameterName.experienceGrowth: { GameManager.Instance.playerParameters.experienceGrowth -= value; break; }
             case ModifiedParameterName.pickupRange: { GameManager.Instance.playerParameters.pickupRange -= value; break; }
+            case ModifiedParameterName.additionalLife: { GameManager.Instance.playerParameters.lives -= (int)value; break; }
+            case ModifiedParameterName.dodgeChance: { GameManager.Instance.playerParameters.dodgeChance -= value; break; }
+            case ModifiedParameterName.instakill: { GameManager.Instance.playerParameters.instakill -= value; break; }
         }
     }
 
@@ -65,11 +71,14 @@ public enum ModifiedParameterName
 {
     movementSpeed,
     maxHP,
-    regenTime,
+    regenAmount,
     additionalDamage,
     additionalProjectileAmmount,
     weaponCooldownReduction,
     luck,
     experienceGrowth,
     pickupRange,
+    additionalLife,
+    dodgeChance,
+    instakill,
 }
