@@ -24,7 +24,7 @@ public class PlayerParameters: MonoBehaviour
     public float weaponCooldownReduction; /// Percentage
 
     public float luck;
-    public float experienceGrowth;
+    public int experienceGrowth;
 
     public int lives;
     public float dodgeChance;
@@ -35,11 +35,14 @@ public class PlayerParameters: MonoBehaviour
 
     [Header("Leveling parameters")]
     public int xp; /// Each level either requires +N more XP, or I can make a fancy formula for that
+    public int requiredXP;
     public int level;
 
     private void Start()
     {
         StartCoroutine(RegenCoroutine());
+        requiredXP = 5;
+        GameManager.Instance.inGameUIController.UpdateIcons();
     }
 
     private IEnumerator RegenCoroutine()
@@ -52,6 +55,7 @@ public class PlayerParameters: MonoBehaviour
     public void RecieveDamage(float damage)
     {
         hp -= damage;
+        GameManager.Instance.inGameUIController.CalculateHPBar();
 
         if (hp <= 0)
             Death();
@@ -59,7 +63,8 @@ public class PlayerParameters: MonoBehaviour
 
     private void Regenerate()
     {
-        hp += regenAmount;
+        hp += regenAmount; 
+        GameManager.Instance.inGameUIController.CalculateHPBar();
 
         if (hp >= maxHP)
             hp = maxHP;
@@ -70,4 +75,22 @@ public class PlayerParameters: MonoBehaviour
 
     }
 
+    public void GetXP(int xp)
+    {
+        this.xp += xp + experienceGrowth;
+
+        if (this.xp >= requiredXP)
+        {
+            LevelUp();
+            this.xp -= requiredXP;
+            requiredXP += 5;
+        }
+
+        GameManager.Instance.inGameUIController.CalculateXPBar();
+    }
+
+    public void LevelUp()
+    {
+        GameManager.Instance.levelupWindowController.OpenWindow();
+    }
 }

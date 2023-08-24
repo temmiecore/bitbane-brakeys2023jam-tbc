@@ -9,8 +9,14 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerParameters))]
 public class PlayerController : MonoBehaviour
 {
-    void Update()
+    private void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+            OpenPauseMenu();
+    }
 
+    private void OpenPauseMenu()
+    {
+        GameManager.Instance.pauseMenuController.OpenPauseMenu();
     }
 }

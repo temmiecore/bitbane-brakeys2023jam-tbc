@@ -35,6 +35,15 @@ public class GameManager : MonoBehaviour
     [Header("Items/Weapons already on Player")]
     public List<ICollectable> playerCollectables;
 
+    [Header("Levelup Window Controller")]
+    public LevelupWindowController levelupWindowController;
+
+    [Header("In Game UI Controller")]
+    public InGameUIController inGameUIController;
+
+    [Header("Pause Menu Controller")]
+    public PauseMenuController pauseMenuController;
+
     private void Start()
     {
         collectables.Sort((x,y) => x.weight.CompareTo(y.weight));

@@ -40,7 +40,7 @@ public class ExplosionProjectile : MonoBehaviour
         GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(explosion, 0.5f);
 
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(GameManager.Instance.weaponParent.position, 0.48f, LayerMask.GetMask("Enemy"));
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.32f, LayerMask.GetMask("Enemy"));
 
         foreach (Collider2D collider in colliders)
         {

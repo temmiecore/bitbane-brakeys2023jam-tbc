@@ -18,6 +18,8 @@ public class LevelupWindowController : MonoBehaviour
     private List<ICollectable> bufferList;
     private int totalWeight;
 
+    private int reopenTime;
+
     private void Start()
     {
         isNew = new List<bool> { true, true, true };
@@ -30,6 +32,8 @@ public class LevelupWindowController : MonoBehaviour
         {
             ICollectable newItem = Instantiate(items[cell], GameManager.Instance.itemParent);
             GameManager.Instance.playerCollectables.Add(newItem);
+            GameManager.Instance.inGameUIController.UpdateIcons();
+
         }
         else
         {
@@ -47,6 +51,23 @@ public class LevelupWindowController : MonoBehaviour
         icons[0].sprite = null; icons[1].sprite = null; icons[2].sprite = null;
         descriptions[0].text = ""; descriptions[1].text = ""; descriptions[2].text = "";
         buttons[0].enabled = false; buttons[1].enabled = false; buttons[2].enabled = false;
+
+
+        int weaponCount = 0;
+        foreach (ICollectable item in GameManager.Instance.playerCollectables)
+        {
+            if (item is IWeapon)
+                weaponCount++;
+        }
+
+        if (weaponCount == 4)
+        {
+            foreach (ICollectable item in GameManager.Instance.collectables)
+            {
+                if (item is IWeapon && !GameManager.Instance.playerCollectables.Contains(item))
+                    GameManager.Instance.collectables.Remove(item);
+            }
+        }
 
         totalWeight = 0;
         bufferList = new List<ICollectable>(GameManager.Instance.collectables);
@@ -108,14 +129,29 @@ public class LevelupWindowController : MonoBehaviour
 
     public void OpenWindow()
     {
+        if (canvasGroup.alpha == 1f)
+        {
+            reopenTime++;
+            return;
+        }
+
         UpdateWindow();
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+        Time.timeScale = 0;
     }
 
     public void CloseWindow()
     {
+        Time.timeScale = 1;
         canvasGroup.alpha = 0f;
         canvasGroup.blocksRaycasts = false;
+
+        if (reopenTime > 0)
+        {
+            OpenWindow();
+            reopenTime--;
+        }
+
     }
 }

@@ -28,7 +28,7 @@ public class Item : ICollectable
             case ModifiedParameterName.additionalProjectileAmmount: { GameManager.Instance.playerParameters.additionalProjectileAmmount += (int)value; break; }
             case ModifiedParameterName.weaponCooldownReduction: { GameManager.Instance.playerParameters.weaponCooldownReduction += value; break; }
             case ModifiedParameterName.luck: { GameManager.Instance.playerParameters.luck += value; break; }
-            case ModifiedParameterName.experienceGrowth: { GameManager.Instance.playerParameters.experienceGrowth += value; break; }
+            case ModifiedParameterName.experienceGrowth: { GameManager.Instance.playerParameters.experienceGrowth += (int)value; break; }
             case ModifiedParameterName.pickupRange: { GameManager.Instance.playerParameters.pickupRange += value; break; }
             case ModifiedParameterName.additionalLife: { GameManager.Instance.playerParameters.lives += (int)value; break; }
             case ModifiedParameterName.dodgeChance: { GameManager.Instance.playerParameters.dodgeChance += value; break; }
@@ -47,7 +47,7 @@ public class Item : ICollectable
             case ModifiedParameterName.additionalProjectileAmmount: { GameManager.Instance.playerParameters.additionalProjectileAmmount -= (int)value; break; }
             case ModifiedParameterName.weaponCooldownReduction: { GameManager.Instance.playerParameters.weaponCooldownReduction -= value; break; }
             case ModifiedParameterName.luck: { GameManager.Instance.playerParameters.luck -= value; break; }
-            case ModifiedParameterName.experienceGrowth: { GameManager.Instance.playerParameters.experienceGrowth -= value; break; }
+            case ModifiedParameterName.experienceGrowth: { GameManager.Instance.playerParameters.experienceGrowth -= (int)value; break; }
             case ModifiedParameterName.pickupRange: { GameManager.Instance.playerParameters.pickupRange -= value; break; }
             case ModifiedParameterName.additionalLife: { GameManager.Instance.playerParameters.lives -= (int)value; break; }
             case ModifiedParameterName.dodgeChance: { GameManager.Instance.playerParameters.dodgeChance -= value; break; }

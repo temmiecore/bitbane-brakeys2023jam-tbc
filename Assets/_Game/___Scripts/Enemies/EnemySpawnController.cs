@@ -14,10 +14,13 @@ public class EnemySpawnController : MonoBehaviour
 
     public float spawnCircleRadius;
 
+    public int fastEnemyCount;
+    public int slowEnemyCount;
+
     private void Start()
     {
-        StartCoroutine(SpawnSlowWaveCoroutine(EnemyPrefabs[Random.Range(0, EnemyPrefabs.Count - 1)], Random.Range(40, 80)));
-        StartCoroutine(SpawnFastWaveCoroutine(EnemyPrefabs[Random.Range(0, EnemyPrefabs.Count - 1)], Random.Range(10, 30)));
+        StartCoroutine(SpawnSlowWaveCoroutine(EnemyPrefabs[Random.Range(2, EnemyPrefabs.Count - 1)], Random.Range(slowEnemyCount, fastEnemyCount+10)));
+        StartCoroutine(SpawnFastWaveCoroutine(EnemyPrefabs[Random.Range(0, 2)], Random.Range(fastEnemyCount, fastEnemyCount+10)));
     }
 
     private IEnumerator SpawnSlowWaveCoroutine(Enemy enemyPrefab, int enemyCount)
@@ -33,7 +36,8 @@ public class EnemySpawnController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(Random.Range(minSlowSpawnTime, maxSlowSpawnTime));
-        StartCoroutine(SpawnSlowWaveCoroutine(EnemyPrefabs[Random.Range(0, EnemyPrefabs.Count - 1)], Random.Range(40, 80)));
+        slowEnemyCount += 5;
+        StartCoroutine(SpawnSlowWaveCoroutine(EnemyPrefabs[Random.Range(2, EnemyPrefabs.Count - 1)], Random.Range(slowEnemyCount, fastEnemyCount + 10)));
     }
 
     private IEnumerator SpawnFastWaveCoroutine(Enemy enemyPrefab, int enemyCount)
@@ -49,6 +53,7 @@ public class EnemySpawnController : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(0, 0.1f));
         }
 
-        StartCoroutine(SpawnSlowWaveCoroutine(EnemyPrefabs[Random.Range(0, EnemyPrefabs.Count - 1)], Random.Range(10, 30)));
+        fastEnemyCount += 5;
+        StartCoroutine(SpawnSlowWaveCoroutine(EnemyPrefabs[Random.Range(0, 2)], Random.Range(fastEnemyCount, fastEnemyCount + 10)));
     }
 }

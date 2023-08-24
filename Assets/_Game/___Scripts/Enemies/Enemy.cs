@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public float hp;
     public float damage;
     public float movementSpeed;
-    public float xpDropChange;
+    public float xpDropChance;
     public GameObject xpDropPrefab;
     public float weight; /// How much knockback is decreased
 
@@ -22,13 +22,18 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        immunityTime = 0.5f;
+        immunityTime = 0.1f;
     }
 
     private void Update()
     {
         direction = GameManager.Instance.playerMover.transform.position - transform.position;
         immunityCooldown += Time.deltaTime;
+
+        if (direction.x < 0)
+            GetComponent<SpriteRenderer>().flipX = true;
+        else
+            GetComponent<SpriteRenderer>().flipX = false;
     }
 
     private void FixedUpdate()
@@ -52,6 +57,8 @@ public class Enemy : MonoBehaviour
 
     public void Death()
     {
+        if (Random.Range(0, 100) > xpDropChance)
+            Instantiate(xpDropPrefab, transform.position, transform.rotation);
         Destroy(gameObject);   
     }
 
@@ -81,7 +88,10 @@ public class Enemy : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
-            GameManager.Instance.playerParameters.RecieveDamage(damage);
+        {
+            if (Random.Range(0, 100) > GameManager.Instance.playerParameters.dodgeChance)
+                GameManager.Instance.playerParameters.RecieveDamage(damage);
+        }
     }
 }
 

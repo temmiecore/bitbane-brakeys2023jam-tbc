@@ -52,7 +52,7 @@ MonoBehaviour:
   - Daedalus bow
   icon: {fileID: 21300000, guid: 61902bd05d1780c4599cfbf3c9675778, type: 3}
   weight: 10
-  damage: 20
+  damage: 5
   cooldownTime: 5
   knockbackStrength: 3
   projectilePrefab: {fileID: 3208855600595303024, guid: 6f189cefa121b8a408d4bc064164ee4a, type: 3}
