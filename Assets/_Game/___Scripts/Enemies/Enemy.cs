@@ -29,12 +29,12 @@ public class Enemy : MonoBehaviour
 
         if (GameManager.Instance.objectiveController.level == 2)
         {
-            if (Random.Range(0, 100) > 90)
+            if (Random.Range(0, 100) > 95)
             {
                 isInfected = true;
                 hp += 20;
-                movementSpeed += 0.1f;
-                /// Add a shader glitch effect
+                movementSpeed -= 0.1f;
+                GetComponent<SpriteRenderer>().material = GameManager.Instance.glitch;
             }
         }
     }
