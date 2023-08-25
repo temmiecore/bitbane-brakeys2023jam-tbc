@@ -25,6 +25,18 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         immunityTime = 0.1f;
+        isInfected = false;
+
+        if (GameManager.Instance.objectiveController.level == 2)
+        {
+            if (Random.Range(0, 100) > 90)
+            {
+                isInfected = true;
+                hp += 20;
+                movementSpeed += 0.1f;
+                /// Add a shader glitch effect
+            }
+        }
     }
 
     private void Update()
