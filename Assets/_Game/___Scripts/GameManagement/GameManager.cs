@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
     public Portal portalPrefab;
     public PortalArrow portalArrowPrefab;
 
+    public Material glitch;
+
     private void Start()
     {
         collectables.Sort((x,y) => x.weight.CompareTo(y.weight));
