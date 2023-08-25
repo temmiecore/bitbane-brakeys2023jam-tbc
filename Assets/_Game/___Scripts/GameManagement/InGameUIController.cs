@@ -30,7 +30,6 @@ public class InGameUIController : MonoBehaviour
     public void CalculateXPBar()
     {
         xpBar.localScale = new Vector3((float)GameManager.Instance.playerParameters.xp / GameManager.Instance.playerParameters.requiredXP, 1, 1);
-        Debug.Log(GameManager.Instance.playerParameters.xp / GameManager.Instance.playerParameters.requiredXP);
     }
 
     public void UpdateIcons()

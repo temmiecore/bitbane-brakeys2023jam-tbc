@@ -44,6 +44,11 @@ public class GameManager : MonoBehaviour
     [Header("Pause Menu Controller")]
     public PauseMenuController pauseMenuController;
 
+    [Header("Objective Controller")]
+    public ObjectiveController objectiveController;
+    public Portal portalPrefab;
+    public PortalArrow portalArrowPrefab;
+
     private void Start()
     {
         collectables.Sort((x,y) => x.weight.CompareTo(y.weight));

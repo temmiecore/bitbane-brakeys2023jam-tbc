@@ -14,7 +14,6 @@ public class PlayerMover : MonoBehaviour
     private Animator animator;
 
     [HideInInspector] public Vector2 handToMouseDirection;
-    //[HideInInspector] public float handToMouseRotation;
 
     [HideInInspector] public Vector2 targetVelocity;
 

@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     public GameObject xpDropPrefab;
     public float weight; /// How much knockback is decreased
 
+    public bool isInfected;
+
     private Rigidbody2D rb;
     private Vector2 direction;
 
@@ -59,6 +61,13 @@ public class Enemy : MonoBehaviour
     {
         if (Random.Range(0, 100) > xpDropChance)
             Instantiate(xpDropPrefab, transform.position, transform.rotation);
+
+        if (GameManager.Instance.objectiveController.level == 1)
+            GameManager.Instance.objectiveController.AddToObjectiveCount();
+
+        if (GameManager.Instance.objectiveController.level == 2 && isInfected)
+            GameManager.Instance.objectiveController.AddToObjectiveCount();
+
         Destroy(gameObject);   
     }
 
