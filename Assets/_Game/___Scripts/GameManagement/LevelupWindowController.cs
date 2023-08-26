@@ -77,8 +77,6 @@ public class LevelupWindowController : MonoBehaviour
         int i = 0;
         int bufferListSize = bufferList.Count;
 
-        Debug.Log(bufferListSize);
-
         while (i < Mathf.Min(3, bufferListSize))
         {
             ICollectable item = SelectRandomItem();

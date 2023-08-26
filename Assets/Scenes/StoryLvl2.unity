@@ -1667,8 +1667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 127, y: -35}
-  m_SizeDelta: {x: 246, y: 30}
+  m_AnchoredPosition: {x: 219.05223, y: -35}
+  m_SizeDelta: {x: 430.1045, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &793644259
 MonoBehaviour:
@@ -1908,9 +1908,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822124442}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: beebe431b941b044ca28702190dedc21, type: 2}
+  m_Controller: {fileID: 9100000, guid: b463f7102c89b8e418fd74be5f664531, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2100,7 +2100,7 @@ MonoBehaviour:
   - {fileID: 682881003610057964, guid: 6334acf4dc0f7f74ab5d06cf4d9ff7c1, type: 3}
   - {fileID: 8484525717557943732, guid: 74033f9be69014c41b1df58d8369bbbb, type: 3}
   playerCollectables:
-  - {fileID: 731496707388532447, guid: 639883c139b279542a9a46de1d1ce36f, type: 3}
+  - {fileID: 1175054716}
   levelupWindowController: {fileID: 1062938636}
   inGameUIController: {fileID: 1294288581}
   pauseMenuController: {fileID: 217494125}
@@ -2205,18 +2205,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1777640497}
     m_Modifications:
-    - target: {fileID: 731496707388532447, guid: 639883c139b279542a9a46de1d1ce36f, type: 3}
-      propertyPath: level
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 731496707388532447, guid: 639883c139b279542a9a46de1d1ce36f, type: 3}
-      propertyPath: damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 731496707388532447, guid: 639883c139b279542a9a46de1d1ce36f, type: 3}
-      propertyPath: cooldownTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2810737248629173017, guid: 639883c139b279542a9a46de1d1ce36f, type: 3}
       propertyPath: m_Name
       value: Throwing Dagger
@@ -2383,6 +2371,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1175054716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 731496707388532447, guid: 639883c139b279542a9a46de1d1ce36f, type: 3}
+  m_PrefabInstance: {fileID: 1024260947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe4f4e1d558f134d929aa90b81b88d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1184724271
 GameObject:
   m_ObjectHideFlags: 0
@@ -4711,7 +4710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777640496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.04, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1683592594}

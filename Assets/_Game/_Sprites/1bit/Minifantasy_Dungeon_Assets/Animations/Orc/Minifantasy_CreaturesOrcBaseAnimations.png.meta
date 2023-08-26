@@ -5,6 +5,18 @@ TextureImporter:
   - first:
       213: 4308273774463494060
     second: Minifantasy_CreaturesOrcBaseAnimations_0
+  - first:
+      213: -7584101128187322866
+    second: Minifantasy_CreaturesOrcBaseAnimations_1
+  - first:
+      213: 8207039697914715572
+    second: Minifantasy_CreaturesOrcBaseAnimations_2
+  - first:
+      213: 4017721878556925092
+    second: Minifantasy_CreaturesOrcBaseAnimations_3
+  - first:
+      213: 3288462542544267580
+    second: Minifantasy_CreaturesOrcBaseAnimations_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -126,7 +138,7 @@ TextureImporter:
         width: 8
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,6 +146,90 @@ TextureImporter:
       bones: []
       spriteID: ca72702fb201acb30800000000000000
       internalID: 4308273774463494060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CreaturesOrcBaseAnimations_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 109
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e51c9c43cdfb690800000000000000
+      internalID: -7584101128187322866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CreaturesOrcBaseAnimations_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 109
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd5cbb5f1345e170800000000000000
+      internalID: 8207039697914715572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CreaturesOrcBaseAnimations_3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 109
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac53b103c0d1c730800000000000000
+      internalID: 4017721878556925092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_CreaturesOrcBaseAnimations_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 109
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3967896247f2ad20800000000000000
+      internalID: 3288462542544267580
       vertices: []
       indices: 
       edges: []

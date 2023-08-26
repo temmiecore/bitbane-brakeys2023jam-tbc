@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -24,7 +25,8 @@ public class Portal : MonoBehaviour
                     }
                 case 3:
                     {
-                        SceneManager.LoadScene("StoryLvl4");
+                        GameManager.Instance.playerMover.transform.position = new Vector3(50, 10, 0);
+                        FindObjectOfType<CreditsController>().GetComponent<Animator>().enabled = true;
                         break;
                     }
                 case 4:

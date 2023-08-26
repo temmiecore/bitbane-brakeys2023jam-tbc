@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 11
-  level: 2
+  level: 0
   maxLevel: 4
   levelDescriptions:
   - A dagger. Throws a dagger in the direction player is heading.
@@ -54,8 +54,8 @@ MonoBehaviour:
   - A dagger. Throws additional dagger.
   icon: {fileID: 21300000, guid: e107eb4162decc147ad85ce68765ca26, type: 3}
   weight: 100
-  damage: 5
-  cooldownTime: 0.59999996
+  damage: 6
+  cooldownTime: 0.9
   knockbackStrength: 2.5
   projectilePrefab: {fileID: 8430682196680678964, guid: 672ab84dbe1c589479f85acd445e09aa, type: 3}
   projectileSpeed: 80
