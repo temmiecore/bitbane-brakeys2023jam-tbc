@@ -12,6 +12,7 @@ public class PlayerShield : MonoBehaviour
     [HideInInspector] public float knockbackStrength;
 
     private Vector3 positionOffset;
+    public float distance;
     private float angle;
 
     private void Start()
@@ -23,7 +24,7 @@ public class PlayerShield : MonoBehaviour
     {
         positionOffset.Set(Mathf.Cos(angle) * 0.5f, Mathf.Sin(angle) * 0.5f, 0);
 
-        transform.position = circlePosition.position + positionOffset;
+        transform.position = circlePosition.position + positionOffset * distance;
         angle += Time.deltaTime * speed;
     }
 
@@ -37,7 +38,7 @@ public class PlayerShield : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            collision.GetComponent<Enemy>().RecieveDamage(damage);
+            collision.GetComponent<Enemy>().RecieveDamage(damage + GameManager.Instance.playerParameters.additionalDamage);
             collision.GetComponent<Enemy>().Knockback(knockbackStrength);
         }
 

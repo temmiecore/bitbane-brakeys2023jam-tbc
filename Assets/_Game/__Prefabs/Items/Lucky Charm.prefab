@@ -52,7 +52,8 @@ MonoBehaviour:
   - Lucky Charm. You're feeling... luckier?
   - Lucky Charm. You're feeling... luckier? MAX
   icon: {fileID: 21300000, guid: 1a55559a9314cae43a7f03ce9783c7b0, type: 3}
-  weight: 20
+  oneBitIcon: {fileID: 8279015586245789754, guid: 4b34eb8954d41544aaedafdf2b623a7b, type: 3}
+  weight: 0
   modifiedParameterName: 6
   value: 2
   levelAdditions:

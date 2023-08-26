@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5246657677346794273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5246657677346793706}
+  - component: {fileID: 5246657677346793885}
+  m_Layer: 0
+  m_Name: 1bitAnimated Shield
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5246657677346793706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246657677346794273}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.116303, y: 0.09071641, z: -1.8738829}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5246657677346793885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246657677346794273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8560d13fe5b757e4bb022ac9be02a12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  level: 0
+  maxLevel: 4
+  levelDescriptions:
+  - Animated shield. Orbits around player.
+  - Animated shield. Additional speed and damage.
+  - Animated shield. Additional speed and damage.
+  - Animated shield. Additional speed and damage.
+  - Animated shield. Additional speed and damage. MAX
+  icon: {fileID: 21300000, guid: f664d5b8faacebf46b9d70b4672b8177, type: 3}
+  oneBitIcon: {fileID: 5007175371749357025, guid: 4b34eb8954d41544aaedafdf2b623a7b, type: 3}
+  weight: 80
+  damage: 0.5
+  cooldownTime: 0.5
+  knockbackStrength: 1
+  shieldSpeed: 1
+  isSpawned: 0
+  shieldPrefab: {fileID: 3248932718548825408, guid: 33553f9ae86beda40912035c80369c07, type: 3}
+  oneBitShieldPrefab: {fileID: 717421312325328405, guid: 45f7cde42d23ec744a6b4a9dd75dc17f, type: 3}

@@ -60,3 +60,4 @@ MonoBehaviour:
   shieldSpeed: 1
   isSpawned: 0
   shieldPrefab: {fileID: 3248932718548825408, guid: 33553f9ae86beda40912035c80369c07, type: 3}
+  oneBitShieldPrefab: {fileID: 717421312325328405, guid: 45f7cde42d23ec744a6b4a9dd75dc17f, type: 3}

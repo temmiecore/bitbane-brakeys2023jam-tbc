@@ -51,9 +51,10 @@ MonoBehaviour:
   - '"Divine Heart" potion. Additional 10% HP.'
   - '"Divine Heart" potion. Additional 10% HP.'
   - '"Divine Heart" potion. Additional 10% HP.'
-  - '"Divine Heart" potion.Additional 10% HP. MAX'
+  - '"Divine Heart" potion. Additional 10% HP. MAX'
   icon: {fileID: 21300000, guid: 2d00dfc84b7e6d04b935c31fd1f9a0ba, type: 3}
-  weight: 50
+  oneBitIcon: {fileID: 5852043875577054819, guid: 4b34eb8954d41544aaedafdf2b623a7b, type: 3}
+  weight: 70
   modifiedParameterName: 1
   value: 10
   levelAdditions:

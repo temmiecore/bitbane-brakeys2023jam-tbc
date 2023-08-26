@@ -53,11 +53,13 @@ MonoBehaviour:
   - Acrane Bolt. Does bolts
   - Acrane Bolt. Does bolts MAX
   icon: {fileID: 21300000, guid: 8a7d2590fe02d88439ec85f6733dcfb4, type: 3}
+  oneBitIcon: {fileID: 8100034361564777321, guid: 62532d53617f31e419928c9b44ead17e, type: 3}
   weight: 100
   damage: 2
   cooldownTime: 2
   knockbackStrength: 2
   projectilePrefab: {fileID: 7249640123050151216, guid: f6067e82761bc064ba23e5050c7b979a, type: 3}
+  oneBitpProjectilePrefab: {fileID: 469234487731145112, guid: c9297ba7a7352fa4aa168a143f2e2515, type: 3}
   projectileAmount: 3
   projectileSpeed: 80
   projectilePierce: 2

@@ -48,12 +48,13 @@ MonoBehaviour:
   maxLevel: 4
   levelDescriptions:
   - Restoration ring. Grants life regeneration.
-  - Restoration ring. Life regeneration speed increased.
-  - Restoration ring. Life regeneration speed increased.
-  - Restoration ring. Life regeneration speed increased.
-  - Restoration ring. Life regeneration speed increased. MAX
+  - Restoration ring. Life regen speed increased.
+  - Restoration ring. Life regen speed increased.
+  - Restoration ring. Life regen speed increased.
+  - Restoration ring. Life regen speed increased. MAX
   icon: {fileID: 21300000, guid: a4a7840d7464cbc4e89a202b5d1af04f, type: 3}
-  weight: 40
+  oneBitIcon: {fileID: 5135443170537419395, guid: 4b34eb8954d41544aaedafdf2b623a7b, type: 3}
+  weight: 70
   modifiedParameterName: 2
   value: 2
   levelAdditions:

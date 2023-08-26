@@ -51,10 +51,11 @@ MonoBehaviour:
   - The "Razor" dagger. Slightly higher chance to instakill an enemy.
   - The "Razor" dagger. Slightly higher chance to instakill an enemy. MAX
   icon: {fileID: 21300000, guid: 6096ac81ebee04a49bd8c66e5f0f144c, type: 3}
+  oneBitIcon: {fileID: 2772395109620450730, guid: 4b34eb8954d41544aaedafdf2b623a7b, type: 3}
   weight: 10
   modifiedParameterName: 11
-  value: 0.05
+  value: 0.08
   levelAdditions:
   - 0
-  - 0.02
-  - 0.02
+  - 0.04
+  - 0.04

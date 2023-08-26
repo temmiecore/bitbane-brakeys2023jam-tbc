@@ -118,3 +118,4 @@ MonoBehaviour:
   projectilePierce: 0
   projectileBounce: 0
   knockbackStrength: 0
+  distance: 1

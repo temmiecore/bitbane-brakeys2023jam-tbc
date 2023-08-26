@@ -20,7 +20,7 @@ public class HolyWaterBroken : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            collision.GetComponent<Enemy>().RecieveDamage(damage);
+            collision.GetComponent<Enemy>().RecieveDamage(damage + GameManager.Instance.playerParameters.additionalDamage);
             collision.GetComponent<Enemy>().Knockback(knockbackStrength);
         }
 

@@ -52,9 +52,11 @@ MonoBehaviour:
   - 'Lunar Rocket. '
   - 'Lunar Rocket. '
   icon: {fileID: 21300000, guid: 4377a68055b4c21429703ca295ff0893, type: 3}
+  oneBitIcon: {fileID: -1499494853866962062, guid: 62532d53617f31e419928c9b44ead17e, type: 3}
   weight: 40
   damage: 10
   cooldownTime: 4
   knockbackStrength: 2
   projectilePrefab: {fileID: 7177619941510119948, guid: 6aa0febb9486d5f4fa66cdf0ac5d7008, type: 3}
+  oneBitProjectilePrefab: {fileID: 6691990362889915736, guid: 3ad9212ecd1704146b7dc01d428cbb7d, type: 3}
   projectileSpeed: 50

@@ -53,6 +53,7 @@ MonoBehaviour:
   - Sacrificial Skull. Increased area, damage and knockback.
   - Sacrificial Skull. Increased area, damage and knockback. MAX
   icon: {fileID: 21300000, guid: f0f3258d9f033984ab196cac8d8a87b9, type: 3}
+  oneBitIcon: {fileID: 4409222903551733555, guid: 62532d53617f31e419928c9b44ead17e, type: 3}
   weight: 80
   damage: 0.5
   cooldownTime: 0.1
@@ -60,3 +61,4 @@ MonoBehaviour:
   circleRadius: 0.7
   isSpawned: 0
   circlePrefab: {fileID: 4499669103145894808, guid: df714fc05fe6b5a4e95d3b6af4fa731b, type: 3}
+  oneBitCirclePrefab: {fileID: 7112152555059334326, guid: 73645738a253bb44c9987a45cf72bfeb, type: 3}

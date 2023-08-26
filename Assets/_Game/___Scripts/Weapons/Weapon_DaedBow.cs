@@ -6,6 +6,7 @@ public class Weapon_DaedBow : IWeapon
 {
     [Header("Projectile properties")]
     public GameObject projectilePrefab;
+    /// Doesn't have a 1bit prefab
     public int projectileAmount;
     public float projectileSpeed;
     public int projectilePierce;

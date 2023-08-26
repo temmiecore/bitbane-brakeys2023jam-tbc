@@ -50,7 +50,7 @@ MonoBehaviour:
   knockbackStrength: 0
   radius: 0
   duration: 0
-  brokenBottlePrefab: {fileID: 1844926598779355541, guid: 32ead6076b97d0544a3e56d86d734d4f, type: 3}
+  brokenBottlePrefab: {fileID: 3398075054485306902, guid: 282098ef114fff8429fa838cda9d0420, type: 3}
 --- !u!212 &1607984250930980033
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -133,7 +133,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.05
+  m_GravityScale: 0.01
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

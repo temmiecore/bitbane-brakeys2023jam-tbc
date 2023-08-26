@@ -8,6 +8,8 @@ public class Weapon_Skull : IWeapon
     public bool isSpawned;
     public PlayerAreaDamage circlePrefab;
 
+    public PlayerAreaDamage oneBitCirclePrefab;
+
     public override void Attack()
     {
         circlePrefab.transform.localScale = new Vector2(circleRadius, circleRadius);
@@ -15,9 +17,19 @@ public class Weapon_Skull : IWeapon
         if (isSpawned)
             return;
 
-        circlePrefab = Instantiate(circlePrefab, transform.parent.position,
-                                        Quaternion.identity);
-        circlePrefab.SetupCircle(this, GameManager.Instance.weaponParent);
+        if (GameManager.Instance.objectiveController.level == 1)
+        {
+
+            circlePrefab = Instantiate(circlePrefab, transform.parent.position,
+                                            Quaternion.identity);
+            circlePrefab.SetupCircle(this, GameManager.Instance.weaponParent);
+        }
+        else
+        {
+            oneBitCirclePrefab = Instantiate(oneBitCirclePrefab, transform.parent.position,
+                                            Quaternion.identity);
+            oneBitCirclePrefab.SetupCircle(this, GameManager.Instance.weaponParent);
+        }
 
         isSpawned = true;
     }

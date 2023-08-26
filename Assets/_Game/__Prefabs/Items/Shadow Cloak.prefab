@@ -48,10 +48,11 @@ MonoBehaviour:
   maxLevel: 3
   levelDescriptions:
   - Shadow Cloak. Chance to dodge enemy attacks.
-  - Shadow Cloak. More chance to dodge enemy attacks.
-  - Shadow Cloak. More chance to dodge enemy attacks.
-  - Shadow Cloak. More chance to dodge enemy attacks. MAX
+  - Shadow Cloak. More chance to dodge attacks.
+  - Shadow Cloak. More chance to dodge attacks.
+  - Shadow Cloak. More chance to dodge attacks. MAX
   icon: {fileID: 21300000, guid: 558eb11db4485024da56f39306023381, type: 3}
+  oneBitIcon: {fileID: 6037615714370517581, guid: 4b34eb8954d41544aaedafdf2b623a7b, type: 3}
   weight: 40
   modifiedParameterName: 10
   value: 0.1

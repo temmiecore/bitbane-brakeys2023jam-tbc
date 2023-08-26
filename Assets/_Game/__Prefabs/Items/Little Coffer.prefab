@@ -48,12 +48,13 @@ MonoBehaviour:
   maxLevel: 4
   levelDescriptions:
   - Little coffer. You gain experience faster.
-  - Little coffer. You gain experience faster.
-  - Little coffer. You gain experience faster.
-  - Little coffer. You gain experience faster.
-  - Little coffer. You gain experience faster. MAX
+  - Little coffer. You gain experience even faster.
+  - Little coffer. You gain experience even faster.
+  - Little coffer. You gain experience even faster.
+  - Little coffer. You gain experience even faster.
   icon: {fileID: 21300000, guid: 01e2eac0eb658c64e91e99d3ca53ad45, type: 3}
-  weight: 40
+  oneBitIcon: {fileID: -8464013305756131047, guid: 4b34eb8954d41544aaedafdf2b623a7b, type: 3}
+  weight: 15
   modifiedParameterName: 7
   value: 2
   levelAdditions:

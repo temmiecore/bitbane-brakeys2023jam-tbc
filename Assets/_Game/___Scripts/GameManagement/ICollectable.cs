@@ -13,6 +13,7 @@ public abstract class ICollectable : MonoBehaviour
 
     [Header("Icon sprite")]
     public Sprite icon;
+    public Sprite oneBitIcon;
 
     [Header("Item weight")]
     public int weight;

@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
 
         if (GameManager.Instance.objectiveController.level == 2)
         {
-            if (Random.Range(0, 100) > 95)
+            if (Random.Range(0, 100) > 90)
             {
                 isInfected = true;
                 hp += 20;
@@ -111,7 +111,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             if (Random.Range(0, 100) > GameManager.Instance.playerParameters.dodgeChance)
-                GameManager.Instance.playerParameters.RecieveDamage(damage);
+                GameManager.Instance.playerParameters.RecieveDamage(damage + GameManager.Instance.playerParameters.additionalDamage);
         }
     }
 }

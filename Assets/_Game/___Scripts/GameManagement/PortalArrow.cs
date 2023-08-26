@@ -19,7 +19,7 @@ public class PortalArrow : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        transform.position = direction + GameManager.Instance.playerMover.transform.position;
+        transform.position = direction * 0.6f + GameManager.Instance.playerMover.transform.position;
 
         if (Vector2.Distance(portal.transform.position, GameManager.Instance.playerMover.transform.position) < 1.32f)
             spriteRenderer.enabled = false;

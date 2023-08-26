@@ -49,6 +49,7 @@ MonoBehaviour:
   levelDescriptions:
   - Ankh Shard. Grants additional life. Breaks on use.
   icon: {fileID: 21300000, guid: 40d166d49c8e20c42aa4013d206ff913, type: 3}
+  oneBitIcon: {fileID: -8551168258543170089, guid: 4b34eb8954d41544aaedafdf2b623a7b, type: 3}
   weight: 20
   modifiedParameterName: 9
   value: 1

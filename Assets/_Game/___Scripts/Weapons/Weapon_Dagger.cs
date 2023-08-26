@@ -6,11 +6,14 @@ public class Weapon_Dagger : IWeapon
 {
     [Header("Projectile properties")]
     public GameObject projectilePrefab;
+    public GameObject oneBitProjectilePrefab;
     public float projectileSpeed;
     public int projectilePierce;
     public int projectileBounce;
 
     private Vector2 direction;
+    private GameObject projectile;
+
     public override void Attack()
     {
         InstantiateProjectile();
@@ -35,8 +38,16 @@ public class Weapon_Dagger : IWeapon
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        GameObject projectile = Instantiate(projectilePrefab, transform.parent.position,
-                                        Quaternion.AngleAxis(angle - 90f, Vector3.forward));
+        if (GameManager.Instance.objectiveController.level == 1)
+        {
+            projectile = Instantiate(projectilePrefab, transform.parent.position,
+                                            Quaternion.AngleAxis(angle - 90f, Vector3.forward));
+        }
+        else
+        {
+            projectile = Instantiate(oneBitProjectilePrefab, transform.parent.position,
+                                            Quaternion.AngleAxis(angle - 90f, Vector3.forward));
+        }
 
         PlayerProjectile script = projectile.GetComponent<PlayerProjectile>();
         script.SetupProjectile(this);

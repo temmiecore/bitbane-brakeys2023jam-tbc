@@ -33,6 +33,8 @@ public class PlayerParameters: MonoBehaviour
 
     public float pickupRange;
 
+    private bool isDead;
+
     [Header("Leveling parameters")]
     public int xp; /// Each level either requires +N more XP, or I can make a fancy formula for that
     public int requiredXP;
@@ -43,6 +45,7 @@ public class PlayerParameters: MonoBehaviour
         StartCoroutine(RegenCoroutine());
         requiredXP = 5;
         GameManager.Instance.inGameUIController.UpdateIcons();
+        isDead = false;
     }
 
     private IEnumerator RegenCoroutine()
@@ -72,7 +75,22 @@ public class PlayerParameters: MonoBehaviour
 
     public void Death()
     {
+        if (isDead)
+            return;
 
+        isDead = true;
+
+        movementSpeed = 0f;
+        weaponCooldownReduction = -999f;
+        StartCoroutine(DeathCoroutine());
+    }
+
+    IEnumerator DeathCoroutine()
+    {
+        Time.timeScale = 0.7f;
+        GetComponent<Animator>().SetTrigger("Death");
+        yield return new WaitForSeconds(1.5f);
+        FindObjectOfType<DeathScreenController>().GetComponent<Animator>().enabled = true;
     }
 
     public void GetXP(int xp)

@@ -8,6 +8,7 @@ public class Weapon_Shield : IWeapon
     public bool isSpawned;
 
     public PlayerShield shieldPrefab;
+    public PlayerShield oneBitShieldPrefab;
 
     public override void Attack()
     {
@@ -16,9 +17,19 @@ public class Weapon_Shield : IWeapon
         if (isSpawned)
             return;
 
-        shieldPrefab = Instantiate(shieldPrefab, transform.parent.position,
-                                        Quaternion.identity);
-        shieldPrefab.SetupShield(this);
+        if (GameManager.Instance.objectiveController.level == 1)
+        {
+
+            shieldPrefab = Instantiate(shieldPrefab, transform.parent.position,
+                                            Quaternion.identity);
+            shieldPrefab.SetupShield(this);
+        }
+        else
+        {
+            oneBitShieldPrefab = Instantiate(oneBitShieldPrefab, transform.parent.position,
+                                               Quaternion.identity);
+            oneBitShieldPrefab.SetupShield(this);
+        }
 
         isSpawned = true;
     }

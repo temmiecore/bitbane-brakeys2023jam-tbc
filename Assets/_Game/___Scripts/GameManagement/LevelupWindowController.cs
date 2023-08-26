@@ -81,8 +81,19 @@ public class LevelupWindowController : MonoBehaviour
         {
             ICollectable item = SelectRandomItem();
 
-            icons[i].sprite = item.icon;
-            icons[i].SetNativeSize();
+            if (GameManager.Instance.objectiveController.level == 1)
+            {
+                icons[i].sprite = item.icon;
+                icons[i].SetNativeSize();
+                icons[i].rectTransform.sizeDelta = new Vector2(90, 90);
+            }
+            else
+            {
+                icons[i].sprite = item.oneBitIcon;
+                icons[i].SetNativeSize();
+                icons[i].transform.localScale = new Vector3(5, 5, 1);
+            }
+
 
             ICollectable itemOnPlayer = GetItemOnPlayer(item.itemId);
 

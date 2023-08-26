@@ -21,7 +21,7 @@ public class ExplosionProjectile : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            collision.GetComponent<Enemy>().RecieveDamage(damage);
+            collision.GetComponent<Enemy>().RecieveDamage(damage + GameManager.Instance.playerParameters.additionalDamage);
             collision.GetComponent<Enemy>().Knockback(knockbackStrength);
 
             Explosion();
@@ -44,7 +44,7 @@ public class ExplosionProjectile : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            collider.GetComponent<Enemy>().RecieveDamage(damage);
+            collider.GetComponent<Enemy>().RecieveDamage(damage + GameManager.Instance.playerParameters.additionalDamage);
             collider.GetComponent<Enemy>().Knockback(knockbackStrength + 2f);
         }
     }
